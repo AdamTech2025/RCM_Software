@@ -1,0 +1,507 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #000000;
+  background-image: linear-gradient(to bottom right, #000000, #121212);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Ant Design Message Styles */
+.custom-message {
+  background: rgba(18, 18, 18, 0.95) !important;
+  border: 1px solid #333333 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.custom-message .ant-message-notice-content {
+  background: transparent !important;
+  box-shadow: none !important;
+  color: white !important;
+}
+
+.custom-message .anticon {
+  color: white !important;
+  font-size: 16px !important;
+}
+
+/* Custom Tabs Styles */
+.custom-tabs .ant-tabs-nav::before {
+  border-bottom: 1px solid #333333 !important;
+}
+
+.custom-tabs .ant-tabs-tab {
+  background: #121212 !important;
+  border: 1px solid #333333 !important;
+  border-bottom: none !important;
+  border-radius: 8px 8px 0 0 !important;
+  margin-right: 4px !important;
+}
+
+.custom-tabs .ant-tabs-tab-active {
+  background: #1f1f1f !important;
+  border-color: #333333 !important;
+}
+
+.custom-tabs .ant-tabs-tab:hover {
+  background: #1f1f1f !important;
+}
+
+.custom-tabs .ant-tabs-ink-bar {
+  background: #8c7ae6 !important;
+  height: 3px !important;
+}
+
+/* Custom Modal Styles */
+.custom-modal .ant-modal-content {
+  background: #121212 !important;
+  border: 1px solid #333333 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.custom-modal .ant-modal-header {
+  background: transparent !important;
+  border-bottom: 1px solid #333333 !important;
+}
+
+.custom-modal .ant-modal-title {
+  color: white !important;
+}
+
+.custom-modal .ant-modal-close {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.custom-modal .ant-modal-body {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.custom-modal .ant-modal-footer {
+  border-top: 1px solid #333333 !important;
+}
+
+/* Custom Table Styles */
+.ant-table {
+  background: transparent !important;
+  width: 100% !important;
+  table-layout: fixed !important;
+}
+
+.ant-table-thead > tr > th {
+  background: #121212 !important;
+  border-bottom: 1px solid #333333 !important;
+  padding: 12px 16px !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.ant-table-tbody > tr > td {
+  border-bottom: 1px solid #333333 !important;
+  padding: 12px 16px !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #1f1f1f !important;
+}
+
+.ant-table-wrapper {
+  width: 100% !important;
+  overflow-x: auto !important;
+}
+
+.ant-table-container {
+  width: 100% !important;
+}
+
+/* Custom Select Styles */
+.ant-select-dropdown {
+  background: #121212 !important;
+  border: 1px solid #333333 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.ant-select-item {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background: #1f1f1f !important;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background: rgba(140, 122, 230, 0.2) !important;
+  color: white !important;
+}
+
+/* Custom Input Styles */
+.ant-input {
+  background: #121212 !important;
+  border-color: #333333 !important;
+  color: white !important;
+  border-radius: 8px !important;
+}
+
+.ant-input:hover, .ant-input:focus {
+  border-color: #8c7ae6 !important;
+  box-shadow: 0 0 0 2px rgba(140, 122, 230, 0.2) !important;
+}
+
+.ant-input::placeholder {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+/* Custom Card Styles */
+.ant-card {
+  color: white !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  backdrop-filter: blur(10px) !important;
+  transition: all 0.3s ease !important;
+  width: 100% !important;
+}
+
+.ant-card-body {
+  padding: 16px !important;
+  width: 100% !important;
+}
+
+.ant-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+.ant-card-head-title {
+  color: white !important;
+}
+
+/* Custom Progress Styles */
+.ant-progress-text {
+  color: white !important;
+}
+
+/* Custom List Styles */
+.ant-list-item {
+  color: white !important;
+  padding: 12px 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.ant-list-item-action {
+  margin-left: auto !important;
+}
+
+/* Custom Button Styles */
+.ant-btn {
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.ant-btn-primary {
+  background: linear-gradient(135deg, #8c7ae6, #7158e2) !important;
+  border-color: #7158e2 !important;
+  box-shadow: 0 4px 12px rgba(113, 88, 226, 0.4) !important;
+}
+
+.ant-btn-primary:hover, .ant-btn-primary:focus {
+  background: linear-gradient(135deg, #9c88ff, #8c7ae6) !important;
+  border-color: #8c7ae6 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(113, 88, 226, 0.6) !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .ant-card {
+    margin-bottom: 16px;
+  }
+  
+  .ant-table {
+    font-size: 12px;
+  }
+  
+  .ant-statistic-title {
+    font-size: 12px;
+  }
+  
+  .ant-statistic-content {
+    font-size: 20px !important;
+  }
+}
+
+/* Dashboard specific styles */
+.sidebar-dark {
+  background: #000000 !important;
+  background-image: linear-gradient(to bottom, #000000, #121212) !important;
+}
+
+.ant-menu.ant-menu-dark {
+  background: transparent !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+  background: linear-gradient(90deg, rgba(140, 122, 230, 0.2), transparent) !important;
+  border-left: 3px solid #8c7ae6 !important;
+}
+
+.ant-progress-inner {
+  background-color: rgba(18, 18, 18, 0.6) !important;
+}
+
+.ant-statistic-content {
+  color: white !important;
+  font-weight: 600 !important;
+}
+
+/* Add gradient backgrounds for cards */
+.stat-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #121212, #1a1a1a) !important;
+  border: 1px solid #333333 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(140, 122, 230, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Custom Tag Styles */
+.ant-tag {
+  border-radius: 4px !important;
+  font-weight: 500 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Custom Alert Styles */
+.ant-alert {
+  border-radius: 8px !important;
+  border: 1px solid #333333 !important;
+}
+
+/* Custom Divider */
+.ant-divider {
+  border-color: #333333 !important;
+}
+
+/* Custom Tooltip */
+.ant-tooltip-inner {
+  background-color: #121212 !important;
+  border: 1px solid #333333 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+
+/* Full bleed layout */
+.ant-layout {
+  background: transparent !important;
+  width: 100% !important;
+}
+
+/* Remove content margins */
+.ant-layout-content {
+  margin: 0 !important;
+  border-radius: 0 !important;
+  border-left: none !important;
+  border-right: none !important;
+  background: #000000 !important;
+  width: 100% !important;
+}
+
+/* Remove card margins in dashboard */
+.dashboard-home .ant-space-item {
+  margin-bottom: 16px !important;
+  width: 100% !important;
+}
+
+/* Full width container */
+.container-fluid {
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove any remaining white spaces */
+.ant-layout-header {
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.ant-layout-sider {
+  border-right: none !important;
+}
+
+/* Ensure content fills available space */
+.ant-layout-content > div {
+  padding: 16px !important;
+  width: 100% !important;
+}
+
+/* Remove border radius from top level containers */
+.ant-layout-content > .ant-card:first-child {
+  border-radius: 0 !important;
+  border-left: none !important;
+  border-right: none !important;
+  margin: 0 !important;
+}
+
+/* Fix alignment issues */
+.ant-row {
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.ant-col {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+.ant-space {
+  width: 100% !important;
+  display: flex !important;
+}
+
+.ant-space-vertical {
+  flex-direction: column !important;
+}
+
+.ant-space-item {
+  width: 100% !important;
+}
+
+.code-lookup .ant-tabs-content,
+.code-lookup .ant-tabs-tabpane {
+  width: 100% !important;
+}
+
+.ant-table-cell {
+  word-break: break-word !important;
+}
+
+/* Fix for description column in tables */
+.ant-table-cell:nth-child(2) {
+  white-space: normal !important;
+}
+
+/* Fix for notes column in AI suggestions table */
+.ant-table-cell:nth-child(4) {
+  white-space: normal !important;
+}
+
+/* Fix for table row alignment */
+.ant-table-row {
+  display: table-row !important;
+}
+
+/* Fix for table cell alignment */
+.ant-table-cell {
+  display: table-cell !important;
+  vertical-align: middle !important;
+}
+
+/* Fix for table header alignment */
+.ant-table-thead > tr {
+  display: table-row !important;
+}
+
+/* Fix for table body alignment */
+.ant-table-tbody > tr {
+  display: table-row !important;
+}
+
+/* Fix for table container width */
+.ant-table-container {
+  display: table !important;
+  table-layout: fixed !important;
+}
+
+/* Fix for table wrapper width */
+.ant-table-wrapper {
+  overflow-x: auto !important;
+}
+
+/* Fix for list item alignment */
+.ant-list-item-meta {
+  align-items: center !important;
+  width: 100% !important;
+}
+
+/* Fix for card content alignment */
+.ant-card-body {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+/* Fix for row gutter */
+.ant-row {
+  margin: 0 -8px !important;
+}
+
+/* Fix for column padding */
+.ant-col {
+  padding: 0 8px !important;
+}
+
